@@ -13,3 +13,4 @@ class HouseItem(scrapy.Item):
     house_price = scrapy.Field()
     house_type = scrapy.Field()
     house_size = scrapy.Field()
+

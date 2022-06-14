@@ -17,7 +17,8 @@ class LianjiaSpider(scrapy.Spider):
             i = random.random()
             time.sleep(i)
 
-        page = eval(response.xpath('//div[@class="contentBottom clear"]/div[@class="page-box fr"]/div[@class="page-box house-lst-page-box"]/@page-data').get())
+        page = eval(response.xpath('//div[@class="contentBottom clear"]/div[@class="page-box fr"]/div['
+                                   '@class="page-box house-lst-page-box"]/@page-data').get())
         total_page = int(page.get('totalPage'))
         cur_page = int(page.get('curPage'))
         next_page = cur_page + 1
@@ -38,3 +39,4 @@ class LianjiaSpider(scrapy.Spider):
         item["house_type"] = types
         item["house_size"] = size
         yield item
+

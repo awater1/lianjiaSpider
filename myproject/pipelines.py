@@ -5,6 +5,7 @@
 
 
 # useful for handling different item types with a single interface
+import os
 from itemadapter import ItemAdapter
 from openpyxl import Workbook
 from myproject.items import HouseItem
